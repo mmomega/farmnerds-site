@@ -4,20 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farm Nerds</title>
+
     <style>
-        body {
-            background: #111;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 60px;
+        /* Nord Color Palette */
+        :root {
+            --nord0: #2E3440;
+            --nord1: #3B4252;
+            --nord2: #434C5E;
+            --nord3: #4C566A;
+            --nord4: #D8DEE9;
+            --nord5: #E5E9F0;
+            --nord6: #ECEFF4;
+            --nord7: #8FBCBB;
+            --nord8: #88C0D0;
+            --nord9: #81A1C1;
+            --nord10: #5E81AC;
         }
-        h1 { font-size: 48px; margin-bottom: 10px; }
-        p { font-size: 20px; color: #bbb; }
+
+        body {
+            margin: 0;
+            background: var(--nord0);
+            color: var(--nord6);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: var(--nord8);
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: var(--nord4);
+        }
+
+        .logo {
+            width: 190px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-top: 60px;
+            margin-bottom: 15px;
+            color: var(--nord9);
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--nord5);
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 28px;
+            margin: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.2s ease-out;
+        }
+
+        .btn-paypal {
+            background: var(--nord8);
+            color: var(--nord1);
+        }
+
+        .btn-paypal:hover {
+            background: var(--nord9);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 14px;
+            color: var(--nord4);
+            opacity: 0.6;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Farm Nerds</h1>
-    <p>Powered by brisket, bandwidth, and bad ideas that work.</p>
+    <div class="container">
+
+        <!-- Logo (swap YOUR_LOGO_FILE.png with your actual logo filename) -->
+        <img src="farmnerds-logo.png" alt="Farm Nerds Logo" class="logo">
+
+        <h1>Farm Nerds</h1>
+        <p class="tagline">Powered by brisket, bandwidth, and bad ideas that work.</p>
+
+        <!-- Donate Section -->
+        <h2 class="section-title">Support the Server</h2>
+        <p>
+            Every contribution helps keep the Farm Nerds Plex server running strong — upgrading hard drives,
+            expanding storage, and boosting performance inside the Farmlab.  
+            If you enjoy the streams or just want to support the chaos, here’s the easiest way to pitch in.
+        </p>
+
+        <!-- PayPal Donate Button -->
+        <a 
+            href="https://www.paypal.com/donate/?hosted_button_id=QWK366WDFQ9KJ"
+            class="btn btn-paypal"
+            target="_blank">
+            Donate with PayPal
+        </a>
+
+        <footer>
+            Farm Nerds © 2025 — Stephenville, Texas
+        </footer>
+    </div>
 </body>
 </html>
